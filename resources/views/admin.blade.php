@@ -17,13 +17,28 @@
     <div class="card mt-3">
       <ul class="list-group list-group-flush">
         @if (Auth::user()->role == 'murid')
-        <li class="list-group-item">Menu Murid</li>
+        <div class="mb-3">
+          <li class="list-group-item">Menu Murid</li>
+        </div>
+        <div class="mb-3">
+          <a href="{{ route('murid') }}" class="btn btn-primary">Lanjut Ke Halaman</a>
+        </div>
         @endif
         @if (Auth::user()->role == 'guru')
-        <li class="list-group-item">Menu Guru</li>
+        <div class="mb-3">
+          <li class="list-group-item">Menu Guru</li>
+        </div>
+        <div class="mb-3">
+          <a href="{{ route('guru') }}" class="btn btn-primary">Lanjut Ke Halaman</a>
+        </div>
         @endif
         @if (Auth::user()->role == 'kepsek')
-        <li class="list-group-item">Menu Kepala Sekolah</li>
+        <div class="mb-3">
+          <li class="list-group-item">Menu Kepala Sekolah</li>
+        </div>
+        <div class="mb-3">
+          <a href="{{ route('kepsek') }}" class="btn btn-primary">Lanjut Ke Halaman</a>
+        </div>
         @endif
 
       </ul>
